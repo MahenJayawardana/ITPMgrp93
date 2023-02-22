@@ -1,6 +1,7 @@
 import {Route, Routes} from "react-router-dom";
 import './App.css';
 import Home from "./Client/homepage"
+import Navbar from "./Client/components/navbar"
 function App() {
   return (
     <>
@@ -8,7 +9,7 @@ function App() {
       <header className="App-header">
     
         <p>'header'</p>
-     
+        <Navbar/>
       </header>
     </div>
       <Routes>
