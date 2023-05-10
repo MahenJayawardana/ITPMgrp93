@@ -1,6 +1,7 @@
 import "../css/navbar.css"
 import { Link } from "react-router-dom"
 import something from "./Waste Wizard Logo.png"
+import * as IoIcons5 from "react-icons/io5";
 
 
 function Navbar(){
@@ -12,11 +13,24 @@ function Navbar(){
                     <div className="logo_container">
                     <img className="logo" src={something} alt="Logo"/>
                     </div>
-                <div className="font-kreon">WASTE WIZARD</div>
-            </div>
+                    <div className="Wastewizardandlogins">
+                        <div className="font-kreon">WASTE WIZARD</div>
+                        <div className="LoginRegister">    
+                            <div className="HeaderLogin">Log In</div>
+                            <div className="HeaderRegister">Register</div>
+                        </div> 
+                    </div> 
+                </div>
 
             <div className="Links_and_button_container">
-                <button className="Donate_button_header" >DONATE NOW</button>
+                <div className="cartanddonate">
+                    <div className="cartbuttonheader"><IoIcons5.IoCartOutline/>
+                    </div>
+                    <button className="Donate_button_header" >DONATE NOW 
+                    <div className="donatebuttonicon"><IoIcons5.IoHeartCircle/>
+                    </div>
+                    </button>
+                </div>
                 <nav className="nav">
 
                     <ul className="font-abel">

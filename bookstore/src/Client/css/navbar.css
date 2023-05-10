@@ -1,6 +1,7 @@
 .header{
     display: flex;
     justify-content: space-between;
+    height: 40px;
 }
 .navcss{
   
@@ -12,20 +13,47 @@
 .wastewizardlogo{
     display: flex;
     justify-items: left;
+    justify-content: space-between;
+    height: 100px;
+    width: 430px;
+    margin: 20px;
   }
+
+.Wastewizardandlogins{
+    display: grid;
+    justify-content: center;
+    height: 70px;
+    width: 300px;
+    margin-top: 25px;
+}
  
 .logo{
     height: 100px;
     width: 90px;
-    margin: 20px;
 }
 
 .font-kreon {
     font-family: 'Kreon', serif;
     font-size: 30pt;
     color: #096427;
-    margin-top: 45px;
-    margin-left: 10px;
+}
+
+.LoginRegister{
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+    height: 20px;
+    font-family: 'Abel', sans-serif;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.HeaderLogin:hover{
+    color: #77a900;
+}
+
+.HeaderRegister:hover{
+    color: #77a900;
 }
 
 .font-abel{
@@ -35,28 +63,56 @@
 .Links_and_button_container{
     display: grid;
     justify-items: right;
+    height: 100px;
+}
 
+.cartanddonate{
+    display: flex;
+    justify-content: space-between;
+    width: 260px;
+    height: 100%;
+}
+
+.cartbuttonheader{
+    font-size: 35pt;
+    color: #096427;
+    margin-top: 2.5vh;
+    cursor: pointer;
+}
+
+.cartbuttonheader:hover{
+    color: #77a900;
+    transform: scale(1.2);
 }
 
 .Donate_button_header{
+    display: flex;
+    justify-content: center;
     height: 40px;
-    width: 200px;
+    width: 150px;
     color: #ffffff;
     background-color: #096427;
     border-style: none;
     cursor: pointer;
-    margin-top: 3vh;
     margin-right: 5vh;
+    margin-top: 3vh;
+    padding-top: 8px;
     font-family: 'Abel', sans-serif;
     font-size: 14pt;
 }
 
+.donatebuttonicon{
+    font-size: 20pt;
+    margin-left: 10px;
+}
+
 .Donate_button_header:hover{
     background-color: #77a900;
+    transform: scale(1.2);
 }
 
 .nav{
-    margin-top: 6vh;
+    margin-top: 4vh;
     margin-right: 5vh;
 }
 
@@ -67,14 +123,11 @@ li{
     }
 li a{
     
-    font-size: 24px;
+    font-size: 20px;
     margin-left: 10px;
     color: #096427;
     text-decoration: none;
 }
   li a:hover{
    color: #77a900;
-}
-    .header{
-    height: 40px;
 }

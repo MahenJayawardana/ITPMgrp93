@@ -1,7 +1,8 @@
 import {Route, Routes} from "react-router-dom";
 import './App.css';
-import Home from "./Client/homepage"
+import Home from "./Client/components/Home"
 import Navbar from "./Client/components/navbar"
+
 function App() {
   return (
     <>
@@ -13,7 +14,7 @@ function App() {
       </header>
     </div>
       <Routes>
-        <Route path="/home" element={<Home />}/>
+        <Route path="/Home" element={<Home />}/>
       </Routes>
    {/* <Home/> */}
    </>
