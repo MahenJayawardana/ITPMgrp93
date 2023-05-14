@@ -36,7 +36,7 @@ function Navbar(){
                     <ul className="font-abel">
                         
                         <li>
-                            <Link to="/home">HOME</Link>
+                            <Link to="/Home">HOME</Link>
                         </li>
                         
                         <li>
@@ -48,7 +48,7 @@ function Navbar(){
                         </li>
                         
                         <li>
-                            <Link to="/home">SHOP</Link>
+                            <Link to="/Shop">SHOP</Link>
                         </li>
 
                         <li>

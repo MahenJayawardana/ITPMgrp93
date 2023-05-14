@@ -1,0 +1,62 @@
+.Shop{
+    width: 100%;
+    display:grid;
+    justify-content: center;
+}
+
+.ShopWelcomeText{
+    display: grid;
+    justify-items: center;
+    margin: 50px;
+    font-family: 'Abel', sans-serif;
+    font-size: 20pt;
+}
+
+.ProductGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-template-rows: repeat(3, 1fr); /* 3 rows */
+    gap: 20px; /* Gap between cards */
+    margin: 20px;
+  }
+  
+  .ProductCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .ProductImage {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .ProductDetails {
+    text-align: left;
+    font-family: 'Abel', sans-serif;
+  }
+  
+  .ProductName {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .ProductDescription {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .ProductCategory {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .ProductPrice {
+    font-size: 16px;
+    font-weight: bold;
+  }

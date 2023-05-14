@@ -1,23 +1,23 @@
-import {Route, Routes} from "react-router-dom";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 import './App.css';
-import Home from "./Client/components/Home"
-import Navbar from "./Client/components/navbar"
+import Navbar from "./Client/components/navbar";
+import Home from "./Client/components/Home";
+import Shop from "./Client/components/Shop";
+import AddProduct from "./Client/components/AddProduct";
 
 function App() {
   return (
-    <>
     <div className="App">
       <header className="navcss">
-    
-        
-        <Navbar/>
+        <Navbar />
       </header>
-    </div>
       <Routes>
-        <Route path="/Home" element={<Home />}/>
+        <Route path="/Home" element={<Home />} />
+        <Route path="/Shop" element={<Shop />} />
+        <Route path="/AddProduct" element={<AddProduct />} />
       </Routes>
-   {/* <Home/> */}
-   </>
+    </div>
   );
 }
 
