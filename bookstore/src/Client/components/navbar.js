@@ -44,7 +44,7 @@ function Navbar(){
                         </li>
 
                         <li>
-                            <Link to="/home">LET US KNOW</Link>
+                            <Link to="/LetUsKnow">LET US KNOW</Link>
                         </li>
                         
                         <li>
