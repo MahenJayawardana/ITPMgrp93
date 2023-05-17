@@ -10,7 +10,7 @@ router.post('/save', async (req, res) => {
 
     const {LUKName,LUKShop,LUKAddresss,LUKDescription,LUKEmail}=req.body;
 
-    try {
+    try { 
         const newUser = new lukusersModel({
             LUKName,
             LUKShop,
@@ -77,16 +77,25 @@ router.post('/updateUser/:id', async (req, res) => {
 //getartical
 
 
-// router.get("/getUsers", async ( req, res) => {
-//     lukusersModel.find({}, (err, result) => {
-//       if (err) {
-//         res.json(err);
-//       } else {
-//         res.json(result);
-//       }
-//     });
-//   });
+// router.get("/getUsers", async (req,res)=>{
+//  const users =await lukusersModel.find({}, (err, result)=>{
+//     if(err){
+//       res.json(err);
+//     }else{
+//       res.json(users);
+//     }
+//   })
+// })
 
+router.get('/getUsers', async (req, res) => {
+  try {
+    const users = await lukusersModel.find();
+    res.json(users);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server Error' });
+  }
+});
   
   
 
