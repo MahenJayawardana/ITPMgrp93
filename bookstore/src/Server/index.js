@@ -38,7 +38,10 @@ app.use(
 // });
 
 app.use('/users', require('./routes/userRoutes'));
-app.use("/categories", require("./routes/categoryRoutes"))
-app.use("/products", require("./routes/productRoutes"))
+// app.use("/categories", require("./routes/categoryRoutes"));
+app.use("/products", require("./routes/productRoutes"));
+// app.use("/cart", require("./routes/productRoutes"));
+app.use("/cart", require("./routes/cartRoutes"));
 
 
+module.exports = app;

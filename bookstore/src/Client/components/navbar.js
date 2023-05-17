@@ -30,9 +30,9 @@ function Navbar() {
 
         <div className="Links_and_button_container">
           <div className="cartanddonate">
-            <div className="cartbuttonheader">
+            <Link to="/ShoppingCart" className="cartbuttonheader">
               <IoIcons5.IoCartOutline />
-            </div>
+            </Link>
             <button className="Donate_button_header">
               DONATE NOW
               <div className="donatebuttonicon">

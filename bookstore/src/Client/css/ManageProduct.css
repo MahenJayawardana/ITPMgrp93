@@ -12,22 +12,6 @@
     font-size: 20pt;
 }
 
-.SearchBar {
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Abel', sans-serif;
-  font-size: 20pt;
-  margin: 40px;
-  border: 2px solid #096427;
-  width: calc(100% - 40px);
-  max-width: 800px;
-  box-sizing: border-box;
-  padding: 0 10px;
-}
-
-
 .ProductGrid {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 columns */
@@ -78,7 +62,7 @@
     font-weight: bold;
   }
 
-  .AddtoCart {
+  .UpdateButton {
     height: 40px;
     width: 240px;
     color: #ffffff;
@@ -90,8 +74,41 @@
     margin-top: 15px;
   }
   
-  .AddtoCart:hover {
+  .UpdateButton:hover {
     background-color: #77a900;
     transform: scale(1.1);
   }
   
+  .DeleteButton {
+    height: 40px;
+    width: 240px;
+    color: #ffffff;
+    background-color: #096427;
+    border-style: none;
+    cursor: pointer;
+    font-family: 'Abel', sans-serif;
+    font-size: 14pt;
+    margin-top: 15px;
+  }
+  
+  .DeleteButton:hover {
+    background-color: #77a900;
+    transform: scale(1.1);
+  }
+
+  .Shop.Blur {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+.Popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 101; /* Set z-index to a value higher than the blur */
+}
