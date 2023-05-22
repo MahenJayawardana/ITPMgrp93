@@ -7,7 +7,7 @@ const session = require('express-session');
 
 mongoose.connect('mongodb+srv://ITPM:1234@cluster0.mpix3su.mongodb.net/');
 
-app.listen(3001,()=> {console.log('server is meh');});
+// app.listen(3001,()=> {console.log('server is meh');});
 
 // const express = require('express');
 
