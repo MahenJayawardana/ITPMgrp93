@@ -36,9 +36,6 @@ function App() {
         <Route path="/ManageProduct" element={<ManageProduct />} />
         <Route path="/LUKUsers" element={<LUKUsers/>} />
         <Route path="/AddUser" element={<AddUser/>} />
-        
-        
-       
       </Routes>
     
 

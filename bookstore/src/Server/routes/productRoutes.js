@@ -19,27 +19,25 @@ const Cart = require("../models/Cart");
 
 /**************************Shop Page*****************************/
 
-router.get("/getProduct", async (req, res) => {
-    Product.find({}, (err, result) => {
-        if (err) {
-            res.json(err);
-        } else {
-            res.json(result);
-        }
-    })
-});
+// router.get("/getProduct", async (req, res) => {
+//     Product.find({}, (err, result) => {
+//         if (err) {
+//             res.json(err);
+//         } else {
+//             res.json(result);
+//         }
+//     })
+// });
 
-router.post("/create", (req,res) => {
-    const product = new Product(req.body)
-    product.save((error, data) => {
-        if (error) return res.status(400).json({ status: false, error});
-        return res.status(200).json({
-            status: true,
-            message: "Product has been added successfully",
-            data,
-        });
-    })
-})
+router.get('/getProduct', async (req, res) => {
+  try {
+    const products = await Product.find();
+    res.json(products);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server Error' });
+  }
+});
 
 router.delete("/deleteProduct/:productId", (req, res) => {
   const { productId } = req.params;
