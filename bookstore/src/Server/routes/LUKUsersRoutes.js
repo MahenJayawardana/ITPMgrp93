@@ -99,6 +99,8 @@ router.get('/getUsers', async (req, res) => {
   
   
 
+
+
 router.get('/getUser', (req,res) => {
   lukusersModel.find().exec().then((data, error) => {
       if(error) return res.status(400).json({status: false, error});

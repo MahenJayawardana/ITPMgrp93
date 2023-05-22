@@ -1,11 +1,13 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
+
 import "../css/LUKUsers.css"
 import { useState, useEffect } from 'react';
 import Axios from "axios"
 const LUKUsers = () => {
 
     const [listOfUsers, setListOfUsers] = useState([]);
+    const navigate = useNavigate();
 
   useEffect(() => {
       Axios.get("http://localhost:3001/luk/getUsers")
@@ -14,18 +16,38 @@ const LUKUsers = () => {
           setListOfUsers(response.data);
           console.log("Poops", response.data)
         })
-     
+       
   }, []);
+
+  // const deleteUser = async (id) => {
+    
+  //      Axios.delete(`http://localhost:3001/luk/deleteUser/${id}`)
+  //     .then((response) => {
+ 
+  //     setListOfUsers(); 
+  //     // Fetch the updated user list after deletion
+  //     alert("deleted")
+  //     navigate('/LUKUsers')
+  //   })
+  //   .catch ((error)=>{
+  //     console.error(error);
+  //   })
+  // };
+
 
   const deleteUser = async (id) => {
     try {
       await Axios.delete(`http://localhost:3001/luk/deleteUser/${id}`);
-      setListOfUsers(); // Fetch the updated user list after deletion
-      alert("deleted")
+      alert("Deleted");
+      setListOfUsers((prevList) => prevList.filter((user) => user._id !== id));
     } catch (error) {
       console.error(error);
     }
+    // navigate("/Shop");
   };
+  
+
+
   return (
     <div className='mt-5'>
         <div className='container'>
