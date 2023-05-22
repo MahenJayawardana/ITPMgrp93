@@ -49,7 +49,7 @@ function Navbar() {
                 <Link to="/home">JOIN US</Link>
               </li>
               <li>
-                <Link to="/home">LET US KNOW</Link>
+                <Link to="/LUKUsers">LET US KNOW</Link>
               </li>
               <li>
                 <Link to="/Shop">SHOP</Link>
