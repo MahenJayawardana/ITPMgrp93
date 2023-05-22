@@ -96,10 +96,10 @@
     transform: scale(1.1);
   }
 
-  .Shop.Blur {
+  /* .Shop.Blur {
     filter: blur(5px);
     pointer-events: none;
-}
+} */
 
 .Popup {
   position: fixed;
