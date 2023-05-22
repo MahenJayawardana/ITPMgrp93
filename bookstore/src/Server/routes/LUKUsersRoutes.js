@@ -22,7 +22,7 @@ router.post('/save', async (req, res) => {
         await newUser.save();
         res.json(newUser);
     } catch (err) {
-        res.status(500).json({ message: 'Error adding article', error: err });
+        res.status(500).json({ message: 'Error adding User', error: err });
     }
 
 
