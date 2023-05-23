@@ -19,14 +19,24 @@ const Cart = require("../models/Cart");
 
 /**************************Shop Page*****************************/
 
-router.get("/getProduct", async (req, res) => {
-    Product.find({}, (err, result) => {
-        if (err) {
-            res.json(err);
-        } else {
-            res.json(result);
-        }
-    })
+// router.get("/getProduct", async (req, res) => {
+//     Product.find({}, (err, result) => {
+//         if (err) {
+//             res.json(err);
+//         } else {
+//             res.json(result);
+//         }
+//     })
+// });
+
+router.get('/getProduct', async (req, res) => {
+  try {
+    const products = await Product.find();
+    res.json(products);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server Error' });
+  }
 });
 
 router.post("/create", (req,res) => {
